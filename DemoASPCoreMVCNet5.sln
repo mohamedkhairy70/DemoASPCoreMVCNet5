@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoASPCoreMVCNet5", "DemoASPCoreMVCNet5\DemoASPCoreMVCNet5.csproj", "{7C3C906A-7398-4108-AD89-75F2F26905FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C3C906A-7398-4108-AD89-75F2F26905FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C3C906A-7398-4108-AD89-75F2F26905FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C3C906A-7398-4108-AD89-75F2F26905FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C3C906A-7398-4108-AD89-75F2F26905FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C2A28E4D-67BA-46E7-9F13-DFB95F6BC244}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="~/content/site.css" />
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand"  asp-controller="Home" asp-action="Index">Demo Pie</a>
+                <partial name="_LoginPartial" />
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                   <!-- <li><a asp-controller="Pie" asp-action="List">List Pie</a></li> --> 
+                   @await Component.InvokeAsync("ShoppingCartSummary")
+                </ul>
+                <form class="navbar-form navbar-right" asp-action="List" asp-controller="Pie" method="get">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search" name="namePie">
+                    </div>
+                    <button type="submit" class="btn btn-default">Search Pie</button>
+                </form>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <ul class="list-unstyled components">
+                @await Component.InvokeAsync("CategoryList")
+            </ul>
+        </nav>
+
+
+        <!-- Page Content -->
+        <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+            </nav>
+        </div>
+
+    </div>
+    @RenderSection("Scripts",required:false)
+</body>
+</html>

@@ -1,0 +1,7 @@
+﻿@model IEnumerable<Category>
+
+  @foreach (var item in Model)
+    {
+        <li><a asp-controller="Pie" asp-action="List" asp-route-catId="@item.CategoryId">@item.CategoryName</a></li>
+    }
+    <li><a asp-controller="Pie" asp-action="List">All Pie</a></li>

@@ -1,0 +1,17 @@
+﻿@model Pie
+
+<div class="col-md-12">
+    <div class="thumbnail">
+        <img src="@Model.ImageUrl" class="card-img-top" alt="@Model.Name">
+        <div class="caption">
+            <h3>@Model.Name</h3>
+            <p>@Model.LongDescription</p>
+            <p>
+                <a asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-pieId="@Model.PieId" class="btn btn-primary" role="button">Add To Cart</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
